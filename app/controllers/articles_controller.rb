@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
   def create
 #     debugger
     @article = Article.new(article_params)
+#     The next line hardcodes a user, which is a temp fix
     @article.user = User.first
     if @article.save
       flash[:success] = "Article was successfully created"
